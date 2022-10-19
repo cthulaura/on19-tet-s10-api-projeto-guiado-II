@@ -51,14 +51,14 @@ app.patch('./clientes/:id/consulta', (req, res) => {
         nome: nome,
         data: data,
       };
-      listaClientes.map(cliente, index) => {
+      listaClientes.map((cliente, index) => {
         if (cliente.id == clienteID) {
           listaClientes[index] = {
             ...listaClientes[index],
-            procedimentos: 
+            procedimentos: []
           }
         }
-      }
+      })
     }
 })
 
